@@ -1,174 +1,203 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pustakly - Small guides, big changes</title>
-<style>
-:root{--bg:#0f1020;--card:#191b33;--card2:#22244a;--ink:#f2f3ff;--mut:#9aa0c8;--acc:#ffb522;--acc2:#6c5ce7;--ok:#2ecc9b}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-.wrap{max-width:960px;margin:0 auto;padding:0 18px}
-header{position:sticky;top:0;z-index:9;background:rgba(15,16,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid #2a2c55}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.logo{font-weight:800;font-size:20px;letter-spacing:-.4px}
-.logo span{color:var(--acc)}
-.tag{font-size:12px;color:var(--mut)}
-.hero{padding:52px 0 40px;background:linear-gradient(160deg,#181a3d 0%,#0f1020 60%)}
-.badge{display:inline-block;background:#2a2c55;color:var(--acc);font-size:12px;font-weight:700;padding:5px 12px;border-radius:99px;margin-bottom:16px}
-h1{font-size:clamp(28px,6vw,44px);line-height:1.15;letter-spacing:-1px;font-weight:800}
-h1 em{font-style:normal;color:var(--acc)}
-.sub{color:var(--mut);font-size:16px;max-width:520px;margin:14px 0 24px}
-.btn{display:inline-block;background:var(--acc);color:#1a1500;font-weight:800;padding:14px 26px;border-radius:12px;font-size:16px;text-decoration:none;border:none;cursor:pointer}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid #3a3d78;margin-left:10px}
-.stats{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
-.stat b{font-size:20px}.stat span{display:block;font-size:12px;color:var(--mut)}
-section{padding:44px 0}
-h2{font-size:clamp(20px,4vw,28px);letter-spacing:-.4px;margin-bottom:6px}
-.lead{color:var(--mut);margin-bottom:22px}
-.quiz{background:var(--card);border:1px solid #2a2c55;border-radius:18px;padding:24px}
-.qq{margin:0 0 8px;font-weight:700}
-.opts{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.opt{background:var(--card2);border:1px solid #34376b;color:var(--ink);padding:10px 16px;border-radius:10px;font-size:14px;cursor:pointer}
-.opt.sel{border-color:var(--acc);color:var(--acc)}
-.res{display:none;background:var(--card2);border:1px solid var(--acc);border-radius:14px;padding:18px;margin-top:6px}
-.res b{color:var(--acc)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
-.bcard{background:var(--card);border:1px solid #2a2c55;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:8px}
-.bcard h3{font-size:17px}
-.bcard p{font-size:13px;color:var(--mut);flex:1}
-.price{font-weight:800;font-size:20px}
-.price s{color:var(--mut);font-weight:400;font-size:14px;margin-left:6px}
-.pill{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:99px}
-.pill.live{background:rgba(46,204,155,.15);color:var(--ok)}
-.pill.soon{background:#2a2c55;color:var(--mut)}
-.feat{display:grid;grid-template-columns:1fr;gap:22px}
-@media(min-width:720px){.feat{grid-template-columns:1fr 1.2fr;align-items:center}}
-.cover{background:linear-gradient(145deg,#6c5ce7,#341f97);border-radius:18px;aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between;padding:24px;box-shadow:0 20px 60px rgba(108,92,231,.35)}
-.cover .k{font-size:12px;font-weight:800;letter-spacing:2px;color:#ffe08a;text-transform:uppercase}
-.cover h3{font-size:26px;line-height:1.2}
-.cover .f{font-size:12px;color:#cfc8ff}
-.toc{list-style:none;margin:14px 0}
-.toc li{padding:7px 0;border-bottom:1px dashed #2e3060;font-size:14px;color:#d6d9f7}
-.toc li::before{content:"\2192  ";color:var(--acc)}
-.small{font-size:12px;color:var(--mut)}
-.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.tcard{background:var(--card);border:1px solid #2a2c55;border-radius:14px;padding:16px;font-size:13px;color:#d6d9f7}
-.tcard b{display:block;margin-bottom:4px;color:var(--ink)}
-footer{border-top:1px solid #2a2c55;padding:28px 0;font-size:12px;color:var(--mut)}
-footer b{color:var(--ink)}
-.pagerow{padding:40px 0}
-.backlink{color:var(--acc);font-size:13px;text-decoration:none;display:inline-block;margin-bottom:18px}
-.buybox{background:var(--card);border:1px solid #34376b;border-radius:16px;padding:22px;margin-top:18px}
-.buybox .price{font-size:28px}
-.buybox .btn{width:100%;text-align:center;margin-top:14px}
-.note{margin-top:10px}
-</style></head><body>
-<header><div class="wrap nav">
-<div><div class="logo">Pustak<span>ly</span></div><div class="tag">Small guides. Big changes.</div></div>
-<div class="tag">Guides from &#8377;19</div>
-</div></header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pustakly — Small guides, big changes</title>
+<meta name="description" content="Short, practical guides you can read in one sitting and use the same day. English or Hindi. Instant delivery. Guides from ₹19.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-<div class="hero"><div class="wrap">
-<div class="badge">LAUNCH OFFER LIVE</div>
-<h1>The skills school never taught you.<br><em>For less than your evening snack.</em></h1>
-<p class="sub">Short, practical guides you can read in one sitting and use the same day. English or Hindi. Instant delivery.</p>
-<a class="btn" href="#quiz">Find my guide in 30 seconds</a>
-<a class="btn ghost" href="#books">Browse all guides</a>
-<div class="stats">
-<div class="stat"><b>&#8377;19</b><span>starting price</span></div>
-<div class="stat"><b>30 sec</b><span>to read a guide's summary</span></div>
-<div class="stat"><b>Instant</b><span>delivery after payment</span></div>
-</div>
-</div></div>
+<header class="site-head">
+  <div class="wrap">
+    <div>
+      <div class="logo">Pustak<em>ly</em></div>
+      <div class="head-tag">Small guides. Big changes.</div>
+    </div>
+    <div class="head-right"><b>₹19</b> onwards</div>
+  </div>
+</header>
 
-<section id="quiz"><div class="wrap">
-<h2>Which guide is for you?</h2>
-<p class="lead">Three quick questions. We suggest the one that fits, no spam.</p>
-<div class="quiz">
-<p class="qq">1. What do you most want to fix right now?</p>
-<div class="opts" data-q="1">
-<button class="opt">Speaking English confidently</button>
-<button class="opt">Studying smarter for exams</button>
-<button class="opt">Using AI tools to get ahead</button>
-<button class="opt">Handling my money better</button>
-</div>
-<p class="qq">2. Where are you right now?</p>
-<div class="opts" data-q="2">
-<button class="opt">School or college</button>
-<button class="opt">Job hunting</button>
-<button class="opt">Working already</button>
-</div>
-<p class="qq">3. How much time can you give daily?</p>
-<div class="opts" data-q="3">
-<button class="opt">15 minutes</button>
-<button class="opt">30-60 minutes</button>
-<button class="opt">A couple of hours</button>
-</div>
-<div class="res" id="res"><p>Your match: <b id="resname"></b></p><p class="small" id="resdesc"></p><p style="margin-top:10px"><a class="btn" href="#books" id="reslink">See the guide</a></p></div>
-</div>
-</div></section>
+<main>
 
-<section id="books"><div class="wrap">
-<h2>Featured guide</h2>
-<div class="feat">
-<div class="cover"><div><div class="k">Pustakly guide 01</div></div><h3>AI Tools for Students</h3><div class="f">Hindi &#8226; 40+ pages &#8226; Instant download</div></div>
-<div>
-<h3>AI Tools for Students</h3>
-<p class="small">Stop using ChatGPT like a search bar. This guide shows the exact free tools and ready prompts for notes, assignments, presentations, resumes and daily study, in simple language.</p>
-<ul class="toc">
-<li>The 8 free AI tools every student should know</li>
-<li>30+ copy-paste prompts for study, notes and projects</li>
-<li>Make a full presentation in 10 minutes</li>
-<li>Write a resume that actually gets calls</li>
-<li>A daily 30-minute AI study routine</li>
-</ul>
-<p class="small">Free sample chapter included before you pay.</p>
-<a class="btn" href="guide-ai-tools.html">Open the guide page</a>
-</div>
-</div>
-</div></section>
+<section class="hero">
+  <div class="wrap">
+    <span class="chip">Launch offer live</span>
+    <h1 class="kinetic">The skills school never taught you. *For less than your evening snack.*</h1>
+    <p class="sub">Short, practical guides you can read in one sitting and use the same day. English or Hindi. Instant delivery after payment.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#quiz">Find my guide in 30 seconds</a>
+      <a class="btn btn-ghost" href="#books">Browse all guides</a>
+    </div>
+    <div class="stats">
+      <div><b data-count="19" data-prefix="₹">₹19</b><span>starting price</span></div>
+      <div><b>30 sec</b><span>to get your match</span></div>
+      <div><b>Instant</b><span>delivery after payment</span></div>
+    </div>
+  </div>
+</section>
 
-<section><div class="wrap">
-<h2>All guides</h2>
-<p class="lead">One store. Every region, every language, one simple price.</p>
-<div class="grid">
-<div class="bcard"><span class="pill live">Live</span><h3>AI Tools for Students</h3><p>Free tools and copy-paste prompts for study, projects and resumes.</p><div class="price">&#8377;49 <s>&#8377;149</s></div><a class="btn" href="guide-ai-tools.html" style="padding:10px 18px;font-size:14px">View</a></div>
-<div class="bcard"><span class="pill soon">Coming</span><h3>Speak English Daily</h3><p>The 15-minute daily routine that fixes hesitation, in Hindi.</p><div class="price">&#8377;49</div></div>
-<div class="bcard"><span class="pill soon">Coming</span><h3>Study Like a Topper</h3><p>Active recall, revision cycles and exam-day strategy that top students actually use.</p><div class="price">&#8377;49</div></div>
-<div class="bcard"><span class="pill soon">Coming</span><h3>First Salary Money Basics</h3><p>Where your money should go, SIPs without jargon, avoiding the loan trap.</p><div class="price">&#8377;49</div></div>
-<div class="bcard"><span class="pill soon">Coming</span><h3>First Job Resume Kit</h3><p>Templates and word-by-word resume fixes for freshers.</p><div class="price">&#8377;29</div></div>
-<div class="bcard"><span class="pill soon">Coming</span><h3>AI Reels Playbook</h3><p>Make scroll-stopping reels with AI tools, from script to export.</p><div class="price">&#8377;99</div></div>
+<section class="sec cream" id="quiz">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kick">Book finder</span>
+      <h2>Which guide is for you?</h2>
+      <p>Three quick questions. We suggest the one that fits. No spam, no email needed.</p>
+    </div>
+    <div class="quiz-card reveal">
+      <p class="q">1. What do you most want to fix right now?</p>
+      <div class="opts" data-q="q1">
+        <button data-v="speaking">Speaking English confidently</button>
+        <button data-v="studying">Studying smarter for exams</button>
+        <button data-v="ai">Using AI tools to get ahead</button>
+        <button data-v="money">Handling my money better</button>
+      </div>
+      <p class="q">2. Where are you right now?</p>
+      <div class="opts" data-q="q2">
+        <button data-v="School or college">School or college</button>
+        <button data-v="Job hunting">Job hunting</button>
+        <button data-v="Working already">Working already</button>
+      </div>
+      <p class="q">3. How much time can you give daily?</p>
+      <div class="opts" data-q="q3">
+        <button data-v="15 minutes">15 minutes</button>
+        <button data-v="30-60 minutes">30-60 minutes</button>
+        <button data-v="A couple of hours">A couple of hours</button>
+      </div>
+      <div class="match-card" role="status">
+        <span class="m-label">Your match</span>
+        <h3 class="m-name"></h3>
+        <span class="m-status" style="font-size:.88rem;color:#f4ede1"></span>
+        <p class="m-ctx"></p>
+        <a class="btn btn-primary" href="#books">See the guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kick">Featured guide</span>
+      <h2>Start here</h2>
+    </div>
+    <div class="feat">
+      <div class="book-visual reveal">
+        <span class="bv-tag">Pustakly guide 01</span>
+        <h3>AI Tools<br>for Students</h3>
+        <span class="bv-meta">Hindi · 40+ pages · Instant download</span>
+      </div>
+      <div class="feat-copy price-strike reveal">
+        <h3>AI Tools for Students</h3>
+        <p style="margin-top:10px;color:var(--muted-light)">Stop using ChatGPT like a search bar. This guide shows the exact free tools and ready prompts for notes, assignments, projects and your first resume.</p>
+        <ul>
+          <li>The 8 free AI tools every student should know</li>
+          <li>30+ copy-paste prompts for study, notes and projects</li>
+          <li>Make a full presentation in 10 minutes</li>
+          <li>Write a resume that actually gets calls</li>
+          <li>A daily 30-minute AI study routine</li>
+        </ul>
+        <p style="margin-top:18px;font-size:.88rem;color:var(--muted-light)">Free sample chapter included before you pay.</p>
+        <div class="price-row">
+          <span class="now">₹49</span>
+          <span class="was strike"><s>₹149</s></span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="guide-ai-tools.html">Open the guide page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="strip-track">
+    <span>30+ <b>copy-paste prompts</b></span><span>8 <b>free AI tools</b></span><span>40+ <b>pages, zero fluff</b></span><span>10 min <b>to a full presentation</b></span><span>Same day <b>use, one sitting read</b></span>
+    <span>30+ <b>copy-paste prompts</b></span><span>8 <b>free AI tools</b></span><span>40+ <b>pages, zero fluff</b></span><span>10 min <b>to a full presentation</b></span><span>Same day <b>use, one sitting read</b></span>
+  </div>
 </div>
-</div></section>
 
-<section><div class="wrap">
-<h2>Why buy here</h2>
-<div class="trust">
-<div class="tcard"><b>Real author, real name</b>No ghost-written resold PDFs. Every guide is written here and shown before you buy.</div>
-<div class="tcard"><b>No fake timers</b>When an offer ends, it ends. Digital files don't run out of stock, so we never pretend they do.</div>
-<div class="tcard"><b>Simple promise</b>Digital download, no refunds once delivered. Any issue, message us and we'll sort it.</div>
+<section class="sec cream" id="books">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kick">All guides</span>
+      <h2>One store. Every region, every language, one simple price.</h2>
+    </div>
+    <div class="grid stagger">
+      <article class="g-card">
+        <span class="badge live">Live</span>
+        <h3>AI Tools for Students</h3>
+        <p>Free tools and copy-paste prompts for study, projects and resumes.</p>
+        <div class="price">₹49<s>₹149</s></div>
+        <a class="view" href="guide-ai-tools.html">View →</a>
+      </article>
+      <article class="g-card">
+        <span class="badge soon">Coming</span>
+        <h3>Speak English Daily</h3>
+        <p>The 15-minute daily routine that fixes hesitation, in Hindi.</p>
+        <div class="price">₹49</div>
+      </article>
+      <article class="g-card">
+        <span class="badge soon">Coming</span>
+        <h3>Study Like a Topper</h3>
+        <p>Active recall, revision cycles and exam-day strategy that top students actually use.</p>
+        <div class="price">₹49</div>
+      </article>
+      <article class="g-card">
+        <span class="badge soon">Coming</span>
+        <h3>First Salary Money Basics</h3>
+        <p>Where your money should go, SIPs without jargon, avoiding the loan trap.</p>
+        <div class="price">₹49</div>
+      </article>
+      <article class="g-card">
+        <span class="badge soon">Coming</span>
+        <h3>First Job Resume Kit</h3>
+        <p>Templates and word-by-word resume fixes for freshers.</p>
+        <div class="price">₹29</div>
+      </article>
+      <article class="g-card">
+        <span class="badge soon">Coming</span>
+        <h3>AI Reels Playbook</h3>
+        <p>Make scroll-stopping reels with AI tools, from script to export.</p>
+        <div class="price">₹99</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kick">Why buy here</span>
+      <h2>We say what others won't</h2>
+    </div>
+    <div class="trust-grid stagger">
+      <div class="t-card"><b>Real author, real name</b><p>No ghost-written resold PDFs. Every guide is written here and shown before you buy.</p></div>
+      <div class="t-card"><b>No fake timers</b><p>When an offer ends, it ends. Digital files don't run out of stock, so we never pretend they do.</p></div>
+      <div class="t-card"><b>Simple promise</b><p>Digital download, no refunds once delivered. Any issue, message us and we'll sort it.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:var(--text-light)">Pustakly</b> · working brand name, easily changed</div>
+    <div>Guides from ₹19 · demo build · Contact: message us on Instagram or WhatsApp</div>
+  </div>
+</footer>
+
+<div class="buy-bar">
+  <div class="bb-price">₹49<s>₹149</s></div>
+  <a class="btn btn-primary" href="guide-ai-tools.html">Get the guide</a>
 </div>
-</div></section>
 
-<footer><div class="wrap">
-<b>Pustakly</b> &#183; demo build &#183; Guides from &#8377;19 &#183; Contact: message us on Instagram or WhatsApp<br>
-<span class="small">Working brand name, easily changed. Payment links plug in after gateway approval.</span>
-</div></footer>
-
-<script>
-var pick={};
-document.querySelectorAll('.opts').forEach(function(g){
-g.querySelectorAll('.opt').forEach(function(b){b.onclick=function(){
-g.querySelectorAll('.opt').forEach(function(x){x.classList.remove('sel')});
-b.classList.add('sel');pick[g.dataset.q]=b.textContent;
-if(Object.keys(pick).length===3){
-var n,d;
-if(pick[1].indexOf('Speaking')>-1){n='Speak English Daily';d='The 15-minute daily speaking routine. Launching with the first batch.'}
-else if(pick[1].indexOf('Studying')>-1){n='Study Like a Topper';d='Active recall and revision cycles, made simple.'}
-else if(pick[1].indexOf('AI')>-1){n='AI Tools for Students';d='Live now at the launch price.'}
-else{n='First Salary Money Basics';d='Money basics without jargon.'}
-document.getElementById('resname').textContent=n;
-document.getElementById('resdesc').textContent=d+' (You said: '+pick[2]+', '+pick[3]+' a day.)';
-document.getElementById('res').style.display='block';
-document.getElementById('res').scrollIntoView({behavior:'smooth',block:'center'});
-}}})});
-</script>
-</body></html>
+<script src="js/main.js"></script>
+</body>
+</html>

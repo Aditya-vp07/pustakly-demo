@@ -1,99 +1,174 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Tools for Students - Pustakly</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tools for Students — Pustakly guide 01</title>
+<meta name="description" content="Stop using ChatGPT like a search bar. The exact free tools and ready prompts for notes, assignments, projects and your first resume. ₹49 launch price, instant download.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 <style>
-:root{--bg:#0f1020;--card:#191b33;--card2:#22244a;--ink:#f2f3ff;--mut:#9aa0c8;--acc:#ffb522;--acc2:#6c5ce7;--ok:#2ecc9b}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-.wrap{max-width:960px;margin:0 auto;padding:0 18px}
-header{position:sticky;top:0;z-index:9;background:rgba(15,16,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid #2a2c55}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.logo{font-weight:800;font-size:20px;letter-spacing:-.4px}
-.logo span{color:var(--acc)}
-.tag{font-size:12px;color:var(--mut)}
-.hero{padding:52px 0 40px;background:linear-gradient(160deg,#181a3d 0%,#0f1020 60%)}
-.badge{display:inline-block;background:#2a2c55;color:var(--acc);font-size:12px;font-weight:700;padding:5px 12px;border-radius:99px;margin-bottom:16px}
-h1{font-size:clamp(28px,6vw,44px);line-height:1.15;letter-spacing:-1px;font-weight:800}
-h1 em{font-style:normal;color:var(--acc)}
-.sub{color:var(--mut);font-size:16px;max-width:520px;margin:14px 0 24px}
-.btn{display:inline-block;background:var(--acc);color:#1a1500;font-weight:800;padding:14px 26px;border-radius:12px;font-size:16px;text-decoration:none;border:none;cursor:pointer}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid #3a3d78;margin-left:10px}
-.stats{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap}
-.stat b{font-size:20px}.stat span{display:block;font-size:12px;color:var(--mut)}
-section{padding:44px 0}
-h2{font-size:clamp(20px,4vw,28px);letter-spacing:-.4px;margin-bottom:6px}
-.lead{color:var(--mut);margin-bottom:22px}
-.quiz{background:var(--card);border:1px solid #2a2c55;border-radius:18px;padding:24px}
-.qq{margin:0 0 8px;font-weight:700}
-.opts{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
-.opt{background:var(--card2);border:1px solid #34376b;color:var(--ink);padding:10px 16px;border-radius:10px;font-size:14px;cursor:pointer}
-.opt.sel{border-color:var(--acc);color:var(--acc)}
-.res{display:none;background:var(--card2);border:1px solid var(--acc);border-radius:14px;padding:18px;margin-top:6px}
-.res b{color:var(--acc)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
-.bcard{background:var(--card);border:1px solid #2a2c55;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:8px}
-.bcard h3{font-size:17px}
-.bcard p{font-size:13px;color:var(--mut);flex:1}
-.price{font-weight:800;font-size:20px}
-.price s{color:var(--mut);font-weight:400;font-size:14px;margin-left:6px}
-.pill{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:99px}
-.pill.live{background:rgba(46,204,155,.15);color:var(--ok)}
-.pill.soon{background:#2a2c55;color:var(--mut)}
-.feat{display:grid;grid-template-columns:1fr;gap:22px}
-@media(min-width:720px){.feat{grid-template-columns:1fr 1.2fr;align-items:center}}
-.cover{background:linear-gradient(145deg,#6c5ce7,#341f97);border-radius:18px;aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:space-between;padding:24px;box-shadow:0 20px 60px rgba(108,92,231,.35)}
-.cover .k{font-size:12px;font-weight:800;letter-spacing:2px;color:#ffe08a;text-transform:uppercase}
-.cover h3{font-size:26px;line-height:1.2}
-.cover .f{font-size:12px;color:#cfc8ff}
-.toc{list-style:none;margin:14px 0}
-.toc li{padding:7px 0;border-bottom:1px dashed #2e3060;font-size:14px;color:#d6d9f7}
-.toc li::before{content:"\2192  ";color:var(--acc)}
-.small{font-size:12px;color:var(--mut)}
-.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-.tcard{background:var(--card);border:1px solid #2a2c55;border-radius:14px;padding:16px;font-size:13px;color:#d6d9f7}
-.tcard b{display:block;margin-bottom:4px;color:var(--ink)}
-footer{border-top:1px solid #2a2c55;padding:28px 0;font-size:12px;color:var(--mut)}
-footer b{color:var(--ink)}
-.pagerow{padding:40px 0}
-.backlink{color:var(--acc);font-size:13px;text-decoration:none;display:inline-block;margin-bottom:18px}
-.buybox{background:var(--card);border:1px solid #34376b;border-radius:16px;padding:22px;margin-top:18px}
-.buybox .price{font-size:28px}
-.buybox .btn{width:100%;text-align:center;margin-top:14px}
-.note{margin-top:10px}
-</style></head><body>
-<header><div class="wrap nav"><div><div class="logo">Pustak<span>ly</span></div><div class="tag">Small guides. Big changes.</div></div><div class="tag">Guides from &#8377;19</div></div></header>
+.p-head{padding:72px 0 8px}
+.p-head h1{font-size:clamp(2rem,6vw,3.2rem);max-width:20ch}
+.p-head .sub{margin-top:16px;color:var(--muted-light);max-width:46ch}
+.p-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;margin-top:44px;align-items:start}
+.p-panel{border:1px solid var(--line-dark);border-radius:var(--radius);padding:26px;background:var(--ink-2);position:sticky;top:88px}
+.p-panel .price-now{font-family:var(--font-display);font-size:2.4rem;font-weight:800;color:var(--amber)}
+.p-panel .price-was{color:var(--muted-light);position:relative;display:inline-block;margin-left:6px}
+.p-panel ul{list-style:none;margin:18px 0 22px}
+.p-panel li{padding:8px 0;border-bottom:1px solid var(--line-dark);font-size:.92rem;color:var(--muted-light);display:flex;gap:10px}
+.p-panel li::before{content:"→";color:var(--amber);font-weight:700}
+.flip-wrap{perspective:1200px;margin:8px 0 26px;max-width:340px;cursor:pointer}
+.flip-inner{position:relative;aspect-ratio:3/4;transform-style:preserve-3d;transition:transform .7s var(--ease)}
+.flip-wrap.flipped .flip-inner{transform:rotateY(180deg)}
+.flip-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:10px;border:1px solid var(--line-dark);padding:26px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(150deg,#3d2f14,#171310 65%)}
+.flip-face.back{transform:rotateY(180deg);background:var(--paper);color:var(--text-dark)}
+.flip-face .fv-tag{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.flip-face h3{font-size:1.6rem}
+.flip-face p{font-size:.86rem;color:var(--muted-dark)}
+.flip-face.back .fv-tag{color:var(--amber-deep)}
+.flip-hint{font-size:.78rem;color:var(--muted-light);margin-top:10px}
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:10px}
+.fit{border-radius:var(--radius);padding:24px;border:1px solid var(--line-dark)}
+.fit.yes{background:rgba(245,165,36,.08)}
+.fit.no{background:var(--ink-2)}
+.fit b{display:block;margin-bottom:10px;font-size:1rem}
+.fit.yes b{color:var(--amber)}
+.fit.no b{color:var(--muted-light)}
+.fit ul{list-style:none}
+.fit li{padding:7px 0;font-size:.9rem;border-bottom:1px solid var(--line-dark)}
+.fit li:last-child{border:none}
+@media(max-width:900px){.p-grid{grid-template-columns:1fr}.p-panel{position:static}}
+</style>
+</head>
+<body>
 
-<section class="pagerow"><div class="wrap">
-<a class="backlink" href="index.html">&#8592; Back to all guides</a>
-<div class="feat">
-<div class="cover"><div><div class="k">Pustakly guide 01</div></div><h3>AI Tools for Students</h3><div class="f">Hindi &#8226; 40+ pages &#8226; PDF, instant download</div></div>
-<div>
-<h1 style="font-size:30px">AI Tools for Students</h1>
-<p class="sub">Stop using ChatGPT like a search bar. The exact free tools and ready prompts for notes, assignments, presentations, resumes and daily study. Written in simple language, zero jargon.</p>
-<ul class="toc">
-<li>The 8 free AI tools every student should know</li>
-<li>30+ copy-paste prompts for study, notes and projects</li>
-<li>Make a full presentation in 10 minutes</li>
-<li>Summarise any chapter into notes you'll actually revise</li>
-<li>Write a resume that actually gets calls</li>
-<li>A daily 30-minute AI study routine</li>
-</ul>
-</div>
+<header class="site-head">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="index.html">Pustak<em>ly</em></a>
+      <div class="head-tag">Guide 01 · AI Tools for Students</div>
+    </div>
+    <div class="head-right"><a href="index.html#books">← All guides</a></div>
+  </div>
+</header>
+
+<main>
+<section class="p-head">
+  <div class="wrap">
+    <span class="chip">Launch price · instant download</span>
+    <h1 class="kinetic">Stop using ChatGPT like a search bar.</h1>
+    <p class="sub">The exact free tools and ready prompts for notes, assignments, projects and your first resume. Read in one sitting, use the same day.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:40px">
+  <div class="wrap">
+    <div class="p-grid">
+      <div class="reveal">
+        <div class="flip-wrap" id="flip" tabindex="0" role="button" aria-label="Flip to preview the sample chapter">
+          <div class="flip-inner">
+            <div class="flip-face front">
+              <span class="fv-tag">Pustakly guide 01</span>
+              <h3>AI Tools<br>for Students</h3>
+              <span style="font-size:.78rem;color:var(--muted-light)">Hindi · 40+ pages · Instant download</span>
+            </div>
+            <div class="flip-face back">
+              <span class="fv-tag">Free sample chapter</span>
+              <div>
+                <h3 style="font-size:1.2rem;margin-bottom:10px">Chapter 2: The 8 free tools</h3>
+                <p>Why the paid AI subscriptions students are sold mostly duplicate free tools, and the exact 8 to set up tonight, with what each one is actually for.</p>
+              </div>
+              <span style="font-size:.72rem;color:var(--muted-dark)">Tap to flip back</span>
+            </div>
+          </div>
+        </div>
+        <p class="flip-hint">Tap the book to peek inside the free sample chapter.</p>
+
+        <div class="sec-head" style="margin-top:34px">
+          <h3 style="font-size:1.4rem">What's inside</h3>
+        </div>
+        <ul style="list-style:none;margin-top:16px">
+          <li style="padding:9px 0;border-bottom:1px solid var(--line-dark);display:flex;gap:12px"><span style="color:var(--amber);font-weight:700">→</span>The 8 free AI tools every student should know, and what each is actually for</li>
+          <li style="padding:9px 0;border-bottom:1px solid var(--line-dark);display:flex;gap:12px"><span style="color:var(--amber);font-weight:700">→</span>30+ copy-paste prompts for study, notes and projects</li>
+          <li style="padding:9px 0;border-bottom:1px solid var(--line-dark);display:flex;gap:12px"><span style="color:var(--amber);font-weight:700">→</span>Make a full presentation in 10 minutes, step by step</li>
+          <li style="padding:9px 0;border-bottom:1px solid var(--line-dark);display:flex;gap:12px"><span style="color:var(--amber);font-weight:700">→</span>Write a resume that actually gets calls</li>
+          <li style="padding:9px 0;border-bottom:1px solid var(--line-dark);display:flex;gap:12px"><span style="color:var(--amber);font-weight:700">→</span>A daily 30-minute AI study routine</li>
+        </ul>
+
+        <div class="fit-grid" style="margin-top:40px">
+          <div class="fit yes">
+            <b>This is for you if…</b>
+            <ul>
+              <li>You use AI but feel you're getting 10% of what it can do</li>
+              <li>You want tools that are free, not another subscription</li>
+              <li>You'd rather copy a working prompt than invent one</li>
+            </ul>
+          </div>
+          <div class="fit no">
+            <b>This is NOT for you if…</b>
+            <ul>
+              <li>You want a coding tutorial that builds robots</li>
+              <li>You expect results without opening a single tool</li>
+              <li>You want a physical book, this is a digital PDF</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <aside class="p-panel price-strike">
+        <span class="chip" style="margin-bottom:18px">Pustakly guide 01</span>
+        <div>
+          <span class="price-now">₹49</span>
+          <span class="price-was strike"><s>₹149</s></span>
+        </div>
+        <p style="font-size:.85rem;color:var(--muted-light);margin-top:8px">One-time payment · PDF + instant access · No subscription</p>
+        <ul>
+          <li>40+ pages, zero fluff</li>
+          <li>Free sample chapter before you pay</li>
+          <li>Reads in one sitting, works from today</li>
+        </ul>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" data-buy>Buy now · ₹49</button>
+        <p style="font-size:.78rem;color:var(--muted-light);margin-top:14px;text-align:center">Payment links plug in after gateway approval. Message us on Instagram meanwhile.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b style="color:var(--text-light)">Pustakly</b> · working brand name, easily changed</div>
+    <div>Guides from ₹19 · demo build · Contact: message us on Instagram or WhatsApp</div>
+  </div>
+</footer>
+
+<div class="buy-bar">
+  <div class="bb-price">₹49<s>₹149</s></div>
+  <button class="btn btn-primary" data-buy>Get the guide</button>
 </div>
 
-<div class="buybox">
-<div class="price">&#8377;49 <s>&#8377;149</s> <span class="small">launch offer</span></div>
-<p class="small note">Instant delivery to your WhatsApp and email after payment. Free sample chapter included before you pay.</p>
-<button class="btn" onclick="this.textContent='Payment link plugs in after gateway approval'">Buy now - &#8377;49</button>
-<p class="small note">Demo build: this button connects to the payment link once the gateway is approved.</p>
-</div>
-
-<div class="trust" style="margin-top:26px">
-<div class="tcard"><b>Read before you pay</b>A full sample chapter opens free, so you know exactly what you're getting.</div>
-<div class="tcard"><b>No fake urgency</b>The launch price is real and it ends when we say it ends, honestly dated.</div>
-<div class="tcard"><b>Any issue, we sort it</b>Digital download, no refunds once delivered. Message us and we'll fix any problem.</div>
-</div>
-</div></section>
-
-<footer><div class="wrap"><b>Pustakly</b> &#183; demo build &#183; <a href="index.html" style="color:var(--acc)">All guides</a> &#183; Contact: message us on Instagram or WhatsApp</div></footer>
-</body></html>
+<script src="js/main.js"></script>
+<script>
+(function () {
+  var flip = document.getElementById('flip');
+  if (flip) {
+    flip.addEventListener('click', function () { flip.classList.toggle('flipped'); });
+    flip.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); flip.classList.toggle('flipped'); }
+    });
+  }
+  document.querySelectorAll('[data-buy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var old = b.textContent;
+      b.textContent = 'Gateway coming soon ✓';
+      setTimeout(function () { b.textContent = old; }, 1600);
+    });
+  });
+})();
+</script>
+</body>
+</html>
