@@ -7,11 +7,14 @@
   /* ---- kinetic hero: split headline into words ---- */
   document.querySelectorAll('.kinetic').forEach(function (el) {
     var words = el.textContent.trim().split(/\s+/);
-    // preserve the italic accent marked with *word*
-    el.innerHTML = words.map(function (w) {
-      var cls = w.indexOf('*') > -1 ? 'w accent' : 'w';
-      return '<span class="' + cls + '" style="animation-delay:' + (Array.prototype.indexOf.call(words, w) * 0.04) + 's">' + w.replace(/\*/g, '') + '</span>';
-    }).join(' ');
+    // words wrapped in *asterisks* carry the accent, whole phrase not just single words
+    var out = [], accent = false;
+    words.forEach(function (w, i) {
+      if (w.charAt(0) === '*') accent = true;
+      out.push('<span class="w' + (accent ? ' accent' : '') + '" style="animation-delay:' + (i * 0.04) + 's">' + w.replace(/\*/g, '') + '</span>');
+      if (w.charAt(w.length - 1) === '*') accent = false;
+    });
+    el.innerHTML = out.join(' ');
   });
 
   /* ---- scroll reveal (IntersectionObserver, once) ---- */
